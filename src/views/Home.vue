@@ -41,7 +41,7 @@ const data = reactive({
     <div class="flex items-center justify-between" :class="data.isfront ? '' : 'hauteur-28'">
       <div class="space-y-4 z-10">
         <template v-for="muscle in store.muscles" :key="muscle.name">
-          <div
+          <div @click="muscle.state = !muscle.state"
             class="
               bg-zinc-800
               text-zinc-300
