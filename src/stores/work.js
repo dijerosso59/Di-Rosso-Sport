@@ -12,40 +12,54 @@ export const useWorkStore = defineStore({
     muscles : {
       epaules: {
         name: "Epaules",
-        state: false
+        state: false,
+        parts: ["front"]
       },
       biceps: {
         name: "Biceps",
-        state: false
+        state: false,
+        parts: ["front"]
       },
       avantbras: {
         name: "Avant-bras",
-        state: false
+        state: false,
+        parts: ["front"]
       },
       pecs: {
         name: "Pectoraux",
-        state: false
+        state: false,
+        parts: ["front"]
       },
       abdos: {
         name: "Abdos",
-        state: false
+        state: false,
+        parts: ["front"]
       },
       adducteurs: {
         name: "Adducteurs",
-        state: false
+        state: false,
+        parts: ["front"]
       },
       quadriceps: {
         name: "Quadriceps",
-        state: false
+        state: false,
+        parts: ["front"]
       },
       dos: {
         name: "Dos",
-        state: false
+        state: false,
+        parts: ["back"]
       },
-      dos: {
-        name: "Dos",
-        state: false
-      }
+      cuisses: {
+        name: "Cuisses",
+        state: false,
+        parts: ["back"]
+      },
+      ischio_mollets: {
+        name: "Ischio / Mollets",
+        state: false,
+        parts: ["back"]
+      },
     }
   })
 })

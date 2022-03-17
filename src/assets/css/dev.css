@@ -7,7 +7,7 @@
 @layer components {
 
     body {
-      @apply bg-black text-white container mx-auto p-4 font-fredoka;
+      @apply bg-black text-white container mx-auto px-4 font-fredoka;
     }
 
     h1 {
@@ -15,7 +15,15 @@
     }
 
     svg {
-      @apply w-1/2;
+      @apply fill-white;
+    }
+
+    input {
+      @apply text-black;
+    }
+
+    #app {
+      @apply flex flex-col min-h-screen justify-evenly;
     }
 
     .select-choice {
@@ -31,7 +39,11 @@
     }
 
     path {
-      @apply duration-500;
+      @apply duration-200;
+    }
+
+    .hauteur-28 {
+      height: 28.5rem;
     }
 
     .btn-lime {
