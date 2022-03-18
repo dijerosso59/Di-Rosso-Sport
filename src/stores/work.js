@@ -50,13 +50,23 @@ export const useWorkStore = defineStore({
         state: false,
         parts: ["back"]
       },
+      triceps: {
+        name: "Triceps",
+        state: false,
+        parts: ["back"]
+      },
       cuisses: {
         name: "Cuisses",
         state: false,
         parts: ["back"]
       },
-      ischio_mollets: {
-        name: "Ischio / Mollets",
+      ischios: {
+        name: "Ischios",
+        state: false,
+        parts: ["back"]
+      },
+      mollets: {
+        name: "Mollets",
         state: false,
         parts: ["back"]
       },

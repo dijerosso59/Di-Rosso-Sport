@@ -39,11 +39,7 @@
     }
 
     path {
-      @apply duration-200;
-    }
-
-    .hauteur-28 {
-      height: 28.5rem;
+      @apply duration-200 fill-white;
     }
 
     .btn-lime {
