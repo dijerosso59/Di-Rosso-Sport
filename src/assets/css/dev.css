@@ -6,58 +6,70 @@
 
 @layer components {
 
-    body {
-      @apply bg-black text-white container mx-auto px-4 font-fredoka;
-    }
+  body {
+    @apply bg-black text-white container mx-auto px-4 font-fredoka;
+  }
 
-    h1 {
-      @apply text-4xl font-semibold text-white;
-    }
+  h1 {
+    @apply text-4xl font-semibold text-white;
+  }
 
-    svg {
-      @apply fill-white;
-    }
+  svg {
+    @apply fill-white;
+  }
 
-    path {
-      @apply duration-200 fill-white;
-    }
+  path {
+    @apply duration-200 fill-white;
+  }
 
-    input {
-      @apply text-black bg-zinc-800 rounded-full text-zinc-300 w-full p-3;
-    }
+  input {
+    @apply text-black bg-zinc-800 rounded-full text-zinc-300 w-full p-3;
+  }
 
-    input:checked {
-      @apply bg-lime-300;
-    }
+  input:checked {
+    @apply bg-lime-300;
+  }
 
-    input:focus {
-      @apply outline-none;
-    }
+  input:focus {
+    @apply outline-none;
+  }
 
-    .app {
-      @apply flex flex-col min-h-screen;
-    }
+  .app {
+    @apply flex flex-col min-h-screen;
+  }
 
-    .select-choice {
-      @apply flex justify-evenly bg-zinc-800 rounded-full text-zinc-600 w-11/12 mx-auto p-2 text-center items-center;
-    }
+  .select-choice {
+    @apply flex justify-evenly bg-zinc-800 rounded-full text-zinc-600 w-11/12 mx-auto p-2 text-center items-center;
+  }
 
-    .select-choice button {
-      @apply w-1/2 font-semibold;
-    }
+  .select-choice button {
+    @apply w-1/2 font-semibold;
+  }
 
-    .select-choice .active {
-      @apply bg-lime-300 rounded-full text-black p-1 duration-500;
-    }
+  .select-choice .active {
+    @apply bg-lime-300 rounded-full text-black p-1 duration-500;
+  }
 
-    .custom-width {
-      width: 10.2rem;
-    }
+  .custom-width {
+    width: 10.2rem;
+  }
 
-    .btn-lime {
-      @apply bg-lime-300 font-semibold text-black rounded-full text-gray-600 p-3 w-full;
-    }
+  .btn-lime {
+    @apply bg-lime-300 font-semibold text-black rounded-full text-gray-600 p-3 w-full;
+  }
 
+  .check {
+    @apply rounded-full text-center font-bold duration-1000 text-3xl w-12 p-2 relative;
+  }
+
+  #training li::after {
+    @apply absolute bg-lime-300 h-2 w-9 top-5 -right-9;
+    content: "";
+  }
+
+  #training li:last-child::after {
+    @apply hidden;
+  }
 }
 
 html {

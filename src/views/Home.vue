@@ -21,7 +21,7 @@
 </script>
 
 <template>
-  <div class="app justify-center" data-aos="fade-up">
+  <div class="app justify-center">
     <h1 class="text-center text-5xl">Di Rosso Sport</h1>
     <img class="w-1/3 mt-8 mb-12 mx-auto" src="@/assets/images/logo.svg" alt="">
     <button class="btn-lime" @click="sound()">Commencer</button>

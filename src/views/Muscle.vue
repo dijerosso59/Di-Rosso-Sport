@@ -16,7 +16,7 @@ const data = reactive({
 </script>
 
 <template>
-  <div data-aos="fade-up" class="app justify-evenly">
+  <div class="app justify-evenly">
     <div>
       <h1>Cible Musculaire</h1>
       <p class="text-zinc-600 mt-2">Sélectionnez un groupe de muscles</p>
