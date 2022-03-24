@@ -13,15 +13,14 @@ function handleSubmit() {
 
 
 <template>
-  <form @submit.prevent="handleSubmit()">
-    <div>
-      <label>Series</label>
-      <input type="number" v-model="store.serie" />
-    </div>
-    <div>
-      <label>Repos</label>
-      <input type="number" v-model="store.repos" />
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+  <div data-aos="fade-up" class="app justify-center text-center">
+    <h1 class="mb-20">Personnalisez votre entrainement</h1>
+    <form @submit.prevent="handleSubmit()">
+      <div class="space-y-4">
+        <input placeholder="Série(s)" type="number" v-model="store.serie" />
+        <input placeholder="Repos (en s)" type="number" v-model="store.repos" />
+      </div>
+      <button class="btn-lime mt-10" type="submit">Commencer</button>
+    </form>
+  </div>
 </template>

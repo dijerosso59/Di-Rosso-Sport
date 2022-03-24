@@ -3,8 +3,8 @@ import { defineStore } from 'pinia'
 export const useWorkStore = defineStore({
   id: 'work',
   state: () => ({
-    serie: 2,
-    repos: 3,
+    serie: null,
+    repos: null,
     repos_action: 0,
     work: null,
     chrono: null,
@@ -52,11 +52,6 @@ export const useWorkStore = defineStore({
       },
       triceps: {
         name: "Triceps",
-        state: false,
-        parts: ["back"]
-      },
-      cuisses: {
-        name: "Cuisses",
         state: false,
         parts: ["back"]
       },

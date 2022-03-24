@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
@@ -519,23 +519,45 @@ body{
 h1{
   font-size: 2.25rem;
   line-height: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 svg{
   fill: #fff;
 }
 
-input{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+path{
+  fill: #fff;
+  transition-duration: 200ms;
 }
 
-#app{
+input{
+  width: 100%;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity));
+}
+
+input:checked{
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 242 100 / var(--tw-bg-opacity));
+}
+
+input:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.app{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .select-choice{
@@ -556,7 +578,7 @@ input{
 
 .select-choice button{
   width: 50%;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .select-choice .active{
@@ -569,9 +591,8 @@ input{
   transition-duration: 500ms;
 }
 
-path{
-  fill: #fff;
-  transition-duration: 200ms;
+.custom-width {
+  width: 10.2rem;
 }
 
 .btn-lime{
@@ -579,20 +600,28 @@ path{
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(190 242 100 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  font-weight: 800;
+  padding: 0.75rem;
+  font-weight: 600;
   color: rgb(0 0 0 / var(--tw-text-opacity));
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-input:checked{
-  --tw-bg-opacity: 1;
-  background-color: rgb(190 242 100 / var(--tw-bg-opacity));
-}
-
 .z-10{
   z-index: 10;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .mt-2{
@@ -601,6 +630,22 @@ input:checked{
 
 .mt-12{
   margin-top: 3rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
 }
 
 .flex{
@@ -615,8 +660,8 @@ input:checked{
   height: 1.5rem;
 }
 
-.w-44{
-  width: 11rem;
+.w-40{
+  width: 10rem;
 }
 
 .w-6{
@@ -627,12 +672,8 @@ input:checked{
   width: 9rem;
 }
 
-.w-72{
-  width: 18rem;
-}
-
-.w-40{
-  width: 10rem;
+.w-1\/3{
+  width: 33.333333%;
 }
 
 .transform{
@@ -649,8 +690,16 @@ input:checked{
   align-items: center;
 }
 
+.justify-center{
+  justify-content: center;
+}
+
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]){
@@ -699,6 +748,15 @@ input:checked{
 
 .p-3{
   padding: 0.75rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-zinc-600{

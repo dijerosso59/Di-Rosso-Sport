@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,19 +11,31 @@
     }
 
     h1 {
-      @apply text-4xl font-bold;
+      @apply text-4xl font-semibold text-white;
     }
 
     svg {
       @apply fill-white;
     }
 
-    input {
-      @apply text-black;
+    path {
+      @apply duration-200 fill-white;
     }
 
-    #app {
-      @apply flex flex-col min-h-screen justify-evenly;
+    input {
+      @apply text-black bg-zinc-800 rounded-full text-zinc-300 w-full p-3;
+    }
+
+    input:checked {
+      @apply bg-lime-300;
+    }
+
+    input:focus {
+      @apply outline-none;
+    }
+
+    .app {
+      @apply flex flex-col min-h-screen;
     }
 
     .select-choice {
@@ -31,24 +43,21 @@
     }
 
     .select-choice button {
-      @apply w-1/2 font-extrabold;
+      @apply w-1/2 font-semibold;
     }
 
     .select-choice .active {
       @apply bg-lime-300 rounded-full text-black p-1 duration-500;
     }
 
-    path {
-      @apply duration-200 fill-white;
+    .custom-width {
+      width: 10.2rem;
     }
 
     .btn-lime {
-      @apply bg-lime-300 font-extrabold text-black rounded-full text-gray-600 p-2 w-full;
+      @apply bg-lime-300 font-semibold text-black rounded-full text-gray-600 p-3 w-full;
     }
 
-    input:checked {
-      @apply bg-lime-300;
-    }
 }
 
 html {
