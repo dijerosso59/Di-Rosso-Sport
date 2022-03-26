@@ -23,7 +23,7 @@
   }
 
   input {
-    @apply text-black bg-zinc-800 rounded-full text-zinc-300 w-full p-3;
+    @apply text-black bg-zinc-800 rounded-full text-zinc-300 w-full p-3 pl-6;
   }
 
   input:checked {
@@ -55,19 +55,23 @@
   }
 
   .btn-lime {
-    @apply bg-lime-300 font-semibold text-black rounded-full text-gray-600 p-3 w-full;
+    @apply bg-lime-300 font-semibold text-black rounded-full text-gray-600 p-3 w-full text-center;
   }
 
   .check {
     @apply rounded-full text-center font-bold duration-1000 text-3xl w-12 p-2 relative;
   }
 
-  #training li::after {
-    @apply absolute bg-lime-300 h-2 w-9 top-5 -right-9;
+  .time {
+    @apply rounded-full text-center font-bold text-5xl w-16 p-3 text-black duration-500 mx-auto;
+  }
+
+  #training li::before {
+    @apply absolute bg-lime-300 h-2 w-9 top-5 -left-9;
     content: "";
   }
 
-  #training li:last-child::after {
+  #training li:first-child::before {
     @apply hidden;
   }
 }

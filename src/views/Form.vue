@@ -8,6 +8,7 @@ const router = useRouter();
 function handleSubmit() {
   router.push({ name: "Work" });
   store.work++;
+  store.repos_action = store.repos;
 }
 </script>
 

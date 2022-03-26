@@ -539,6 +539,7 @@ input{
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
   padding: 0.75rem;
+  padding-left: 1.5rem;
   color: rgb(0 0 0 / var(--tw-text-opacity));
   --tw-text-opacity: 1;
   color: rgb(212 212 216 / var(--tw-text-opacity));
@@ -601,6 +602,7 @@ input:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(190 242 100 / var(--tw-bg-opacity));
   padding: 0.75rem;
+  text-align: center;
   font-weight: 600;
   color: rgb(0 0 0 / var(--tw-text-opacity));
   --tw-text-opacity: 1;
@@ -619,10 +621,25 @@ input:focus{
   transition-duration: 1000ms;
 }
 
-#training li::after{
+.time{
+  margin-left: auto;
+  margin-right: auto;
+  width: 4rem;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  transition-duration: 500ms;
+}
+
+#training li::before{
   position: absolute;
   top: 1.25rem;
-  right: -2.25rem;
+  left: -2.25rem;
   height: 0.5rem;
   width: 2.25rem;
   --tw-bg-opacity: 1;
@@ -630,7 +647,7 @@ input:focus{
   content: "";
 }
 
-#training li:last-child::after{
+#training li:first-child::before{
   display: none;
 }
 
@@ -641,16 +658,6 @@ input:focus{
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-8{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .mb-20{
@@ -743,6 +750,12 @@ input:focus{
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-12 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -784,6 +797,11 @@ input:focus{
 .bg-lime-300{
   --tw-bg-opacity: 1;
   background-color: rgb(190 242 100 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .fill-lime-300{
