@@ -533,7 +533,7 @@ path{
   transition-duration: 200ms;
 }
 
-input{
+#form-training input{
   width: 100%;
   border-radius: 9999px;
   --tw-bg-opacity: 1;

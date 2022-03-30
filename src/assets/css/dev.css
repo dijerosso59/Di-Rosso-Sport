@@ -22,7 +22,7 @@
     @apply duration-200 fill-white;
   }
 
-  input {
+  #form-training input {
     @apply text-black bg-zinc-800 rounded-full text-zinc-300 w-full p-3 pl-6;
   }
 
