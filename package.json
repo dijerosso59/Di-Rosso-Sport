@@ -7,7 +7,6 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "aos": "^3.0.0-beta.6",
     "pinia": "^2.0.11",
     "register-service-worker": "^1.7.1",
     "vue": "^3.2.31",
