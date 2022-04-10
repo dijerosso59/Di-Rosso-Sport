@@ -1,6 +1,26 @@
-[{
-    "id": 1,
-    "name": "Développé couché",
-    "muscle": "Pectoraux",
-    "image": "url"
-}]
+[
+    {
+        "id": 1,
+        "name": "Développé couché",
+        "muscle": "Pectoraux",
+        "image": "url"
+    },
+    {
+        "id": 2,
+        "name": "Curl",
+        "muscle": "Biceps",
+        "image": "url"
+    },
+    {
+        "id": 3,
+        "name": "Barre au Front",
+        "muscle": "Triceps",
+        "image": "url"
+    },
+    {
+        "id": 4,
+        "name": "Tirage vertical",
+        "muscle": "Dos",
+        "image": "url"
+    }
+]
