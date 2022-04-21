@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useWorkStore = defineStore({
   id: 'work',
+
   state: () => ({
     isFront: true,
     serie: null,
@@ -66,6 +67,8 @@ export const useWorkStore = defineStore({
         state: false,
         parts: ["back"]
       }
-    ]
+    ],
+    
+    selectedsExercices: []
   })
 })

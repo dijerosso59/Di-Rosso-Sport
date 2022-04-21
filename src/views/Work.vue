@@ -2,6 +2,8 @@
 import { useWorkStore } from "../stores/work";
 import { useRouter } from "vue-router";
 import { reactive } from "vue";
+import Button from '../components/Button.vue'
+
 
 const store = useWorkStore();
 const router = useRouter();
@@ -64,6 +66,6 @@ function Chrono() {
         {{ num_work }}
       </li>
     </ul>
-    <button class="btn-lime" @click="Chrono()">Valider</button>
+    <Button text="Valider" @click="Chrono()" />
   </div>
 </template>

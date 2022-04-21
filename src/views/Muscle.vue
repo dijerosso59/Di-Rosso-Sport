@@ -1,14 +1,14 @@
 <script setup>
 import { useWorkStore } from "../stores/work";
 import { useRouter } from "vue-router";
+import Button from "../components/Button.vue";
 
 const store = useWorkStore();
 const router = useRouter();
 
 function handleSubmit() {
-  router.push({ name: "Form" });
+  router.push({ name: "Exercices" });
 }
-
 </script>
 
 <template>
@@ -432,7 +432,7 @@ c-75 26 -140 47 -144 47 -4 0 -10 -10 -12 -22z m207 -969 c76 -7 134 -16 130
           </g>
         </svg>
       </div>
-      <button class="btn-lime mt-12">Suivant</button>
+      <Button class="mt-12" text="Valider" type="submit" />
     </form>
   </div>
 </template>

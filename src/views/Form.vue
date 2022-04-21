@@ -1,6 +1,9 @@
 <script setup>
 import { useWorkStore } from "../stores/work";
 import { useRouter } from "vue-router";
+import { exercicesServices } from "../services/exercices";
+import { computed, onMounted, ref } from "vue";
+import Button from "../components/Button.vue";
 
 const store = useWorkStore();
 const router = useRouter();
@@ -14,14 +17,31 @@ function handleSubmit() {
 
 
 <template>
-  <div class="app justify-center text-center">
-    <h1 class="mb-20">Personnalisez votre entrainement</h1>
-    <form @submit.prevent="handleSubmit()" id="form-training">
+  <div class="app justify-center text-center space-y-8">
+    <h1>Personnalisez votre entrainement</h1>
+    <ul>
+      <li v-for="exercice in store.selectedsExercices" :key="exercice.id">
+        {{ exercice.name }}
+      </li>
+    </ul>
+    <form @submit.prevent="handleSubmit()" class="space-y-8" id="form-training">
       <div class="space-y-4">
-        <input placeholder="Série(s)" type="number" v-model="store.serie" required />
-        <input placeholder="Repos (en s)" type="number" v-model="store.repos" required />
+        <input
+          placeholder="Série(s)"
+          type="number"
+          v-model="store.serie"
+          min="2"
+          max="5"
+          required
+        />
+        <input
+          placeholder="Repos (en s)"
+          type="number"
+          v-model="store.repos"
+          required
+        />
       </div>
-      <button class="btn-lime mt-10" type="submit">Commencer</button>
+      <Button text="Commencer" type="submit" />
     </form>
   </div>
 </template>

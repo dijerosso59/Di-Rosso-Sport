@@ -1,12 +1,12 @@
 <script setup>
 defineProps({
-  msg: {
+  text: {
     type: String,
-    required: true,
+    required: true
   },
 });
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <button class="btn-lime">{{ text }}</button>
 </template>
