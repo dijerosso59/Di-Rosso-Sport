@@ -205,21 +205,21 @@
     {
         "id": 29,
         "name": "Abduction",
-        "muscle": "Aducteurs",
+        "muscle": "Adducteurs",
         "image": "rowing-haltere.png",
         "state": false
     },
     {
         "id": 30,
         "name": "Adduction",
-        "muscle": "Aducteurs",
+        "muscle": "Adducteurs",
         "image": "rowing-haltere.png",
         "state": false
     },
     {
         "id": 31,
-        "name": "Aducteurs assis",
-        "muscle": "Aducteurs",
+        "name": "Adducteurs assis",
+        "muscle": "Adducteurs",
         "image": "rowing-haltere.png",
         "state": false
     },

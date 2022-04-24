@@ -4,7 +4,6 @@ import { useRouter } from "vue-router";
 import { reactive } from "vue";
 import Button from '../components/Button.vue'
 
-
 const store = useWorkStore();
 const router = useRouter();
 
@@ -15,18 +14,25 @@ const data = reactive({
   show: false,
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.name != "Work") {
+    store.work = null;
+    store.chrono = null;
+    store.repos_action = 0;
+  }
+  next();
+});
+
 function Chrono() {
   data.show = true;
 
   if (store.work == store.serie) {
     router.push({ name: "Form" });
-    store.work = null;
-    store.chrono = null;
-    store.repos_action = 0;
-  } 
-  
+  }
+
   else {
     store.repos_action = store.repos;
+    document.querySelector("#validate-work").disabled = true;
 
     store.chrono = setInterval(() => {
       store.repos_action--;
@@ -35,6 +41,7 @@ function Chrono() {
         store.work++;
         clearInterval(store.chrono);
         data.show = false;
+        document.querySelector("#validate-work").disabled = false;
       }
 
     }, 1000);
@@ -66,6 +73,6 @@ function Chrono() {
         {{ num_work }}
       </li>
     </ul>
-    <Button text="Valider" @click="Chrono()" />
+    <Button id="validate-work" text="Valider" @click="Chrono()" />
   </div>
 </template>

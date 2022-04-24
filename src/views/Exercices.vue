@@ -3,7 +3,7 @@ import { useWorkStore } from "../stores/work";
 import { useRouter } from "vue-router";
 import { exercicesServices } from "../services/exercices";
 import { computed, onMounted, ref } from "vue";
-import Button from '../components/Button.vue'
+import Button from "../components/Button.vue";
 
 const store = useWorkStore();
 const router = useRouter();
@@ -23,8 +23,10 @@ function getExerciceByMuscle(muscles) {
 }
 
 function handleSubmit() {
-  store.selectedsExercices = exercices.value.filter(exercice => exercice.state)
-  router.push({name: "Form"})
+  store.selectedsExercices = exercices.value.filter(
+    (exercice) => exercice.state
+  );
+  router.push({ name: "Form" });
 }
 
 const musclesChoices = computed(() => {
@@ -50,6 +52,7 @@ const musclesChoices = computed(() => {
             class="flex-none mb-6 flex items-center space-x-2"
             v-for="exercice in getExerciceByMuscle(muscle)"
             :key="exercice.id"
+            @click="exercice.state = !exercice.state"
           >
             <input
               type="checkbox"
@@ -61,7 +64,6 @@ const musclesChoices = computed(() => {
                 rounded-full
                 duration-200
               "
-
               v-model="exercice.state"
             />
             <!-- <img
