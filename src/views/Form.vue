@@ -15,20 +15,25 @@ function handleSubmit() {
 }
 </script>
 
-
 <template>
   <div class="app justify-center text-center space-y-8">
     <h1>Personnalisez votre entrainement</h1>
-    <ul>
-      <li v-for="exercice in store.selectedsExercices" :key="exercice.id">
-        {{ exercice.name }}
-      </li>
-    </ul>
     <form @submit.prevent="handleSubmit()" class="space-y-8" id="form-training">
+      <ul class="space-y-4 hidden">
+        <li
+          class="selected-li w-64"
+          v-for="exercice in store.selectedsExercices"
+          :key="exercice.id"
+        >
+          <input type="radio" class="selected-input" />
+          <label>{{ exercice.name }}</label>
+        </li>
+      </ul>
       <div class="space-y-4">
         <input
           placeholder="Série(s)"
           type="number"
+          class="selected-form"
           v-model="store.serie"
           min="2"
           max="5"
@@ -37,6 +42,7 @@ function handleSubmit() {
         <input
           placeholder="Repos (en s)"
           type="number"
+          class="selected-form"
           v-model="store.repos"
           required
         />

@@ -40,39 +40,34 @@ const musclesChoices = computed(() => {
 <template>
   <div class="app justify-center space-y-8">
     <h1 class="text-center">Liste Exercices</h1>
-    <form class="space-y-6" @submit.prevent="handleSubmit()">
-      <ul
-        class="border-2 border-lime-300 p-6 rounded-xl space-y-4"
-        v-for="muscle in musclesChoices"
-        :key="muscle"
-      >
-        <h2>{{ muscle }}</h2>
-        <div class="flex items-center overflow-x-auto space-x-8">
-          <li
-            class="flex-none mb-6 flex items-center space-x-2"
-            v-for="exercice in getExerciceByMuscle(muscle)"
-            :key="exercice.id"
-            @click="exercice.state = !exercice.state"
-          >
-            <input
-              type="checkbox"
-              class="
-                h-6
-                w-6
-                appearance-none
-                bg-zinc-700
-                rounded-full
-                duration-200
-              "
-              v-model="exercice.state"
-            />
-            <!-- <img
+    <form class="space-y-8" @submit.prevent="handleSubmit()">
+      <ul class="space-y-6">
+        <li
+          class="border-2 border-lime-300 p-6 rounded-xl space-y-4"
+          v-for="muscle in musclesChoices"
+          :key="muscle"
+        >
+          <h2>{{ muscle }}</h2>
+          <ul class="flex items-center overflow-x-auto space-x-8">
+            <li
+              class="flex-none mb-6 flex items-center space-x-2"
+              v-for="exercice in getExerciceByMuscle(muscle)"
+              :key="exercice.id"
+              @click="exercice.state = !exercice.state"
+            >
+              <input
+                type="checkbox"
+                class="selected-input"
+                v-model="exercice.state"
+              />
+              <!-- <img
             :src="'/src/assets/images/' + exercice.image"
             :alt="exercice.name"
           /> -->
-            <label class="font-semibold text-xl">{{ exercice.name }}</label>
-          </li>
-        </div>
+              <label class="font-semibold text-xl">{{ exercice.name }}</label>
+            </li>
+          </ul>
+        </li>
       </ul>
       <Button text="Valider" type="submit" />
     </form>

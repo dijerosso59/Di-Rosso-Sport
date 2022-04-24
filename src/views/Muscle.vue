@@ -36,38 +36,22 @@ function handleSubmit() {
 
     <form @submit.prevent="handleSubmit">
       <div class="flex items-center justify-between">
-        <div class="space-y-4 z-10">
+        <ul class="space-y-4 z-10">
           <template v-for="muscle in store.muscles" :key="muscle.name">
-            <div
+            <li
               @click="muscle.state = !muscle.state"
-              class="
-                bg-zinc-800
-                text-zinc-300
-                rounded-lg
-                flex
-                items-center
-                p-3
-                space-x-4
-                w-40
-              "
+              class="selected-li w-40"
               v-if="muscle.parts.includes(store.isFront ? 'front' : 'back')"
             >
               <input
+              class="selected-input"
                 type="checkbox"
                 v-model="muscle.state"
-                class="
-                  h-6
-                  w-6
-                  appearance-none
-                  bg-zinc-700
-                  rounded-full
-                  duration-200
-                "
               />
               <label>{{ muscle.name }}</label>
-            </div>
+            </li>
           </template>
-        </div>
+        </ul>
         <svg :class="store.isFront ? 'w-36' : 'hidden'" viewBox="0 0 30 95">
           <path
             d="m 11.671635,6.3585449 -0.0482,-2.59085 4.20648,-2.46806 4.42769,2.95361 -0.0405,1.94408 0.24197,-3.34467 -2.03129,-2.31103004 -2.84508,-0.51629 -2.20423,0.52915 -1.9363,2.63077004 z"
