@@ -80,7 +80,7 @@
   }
 
   .time {
-    @apply rounded-full text-center font-bold text-5xl py-4 px-6 text-black duration-500 mx-auto;
+    @apply rounded-full text-center font-bold text-5xl py-4 px-6 bg-lime-300 text-black duration-500 mx-auto;
   }
 
   #training li::before {
@@ -90,6 +90,23 @@
 
   #training li:first-child::before {
     @apply hidden;
+  }
+
+  .force {
+    @apply w-20 mx-auto;
+    animation: force 1s ease infinite;
+  }
+
+  @keyframes force {
+    0% {
+      @apply scale-110;
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      @apply scale-110;
+    }
   }
 }
 

@@ -48,9 +48,9 @@ const musclesChoices = computed(() => {
           :key="muscle"
         >
           <h2>{{ muscle }}</h2>
-          <ul class="flex items-center overflow-x-auto space-x-8">
+          <ul class="space-y-4">
             <li
-              class="flex-none mb-6 flex items-center space-x-2"
+              class="flex items-center space-x-5"
               v-for="exercice in getExerciceByMuscle(muscle)"
               :key="exercice.id"
               @click="exercice.state = !exercice.state"

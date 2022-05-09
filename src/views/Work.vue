@@ -2,7 +2,7 @@
 import { useWorkStore } from "../stores/work";
 import { useRouter } from "vue-router";
 import { reactive } from "vue";
-import Button from '../components/Button.vue'
+import Button from "../components/Button.vue";
 
 const store = useWorkStore();
 const router = useRouter();
@@ -28,9 +28,7 @@ function Chrono() {
 
   if (store.work == store.serie) {
     router.push({ name: "Form" });
-  }
-
-  else {
+  } else {
     store.repos_action = store.repos;
     document.querySelector("#validate-work").disabled = true;
 
@@ -43,10 +41,8 @@ function Chrono() {
         data.show = false;
         document.querySelector("#validate-work").disabled = false;
       }
-
     }, 1000);
   }
-
 }
 </script>
 
@@ -54,12 +50,15 @@ function Chrono() {
 <template>
   <div class="app justify-center space-y-12">
     <h1 class="text-center">Entraînement</h1>
-    <h1
-      :class="data.show ? 'bg-lime-300' : 'bg-black'"
-      class="time"
-    >
-      {{ store.repos_action }}
-    </h1>
+
+    <h2 v-if="data.show" class="time">{{ store.repos_action }}</h2>
+    <img
+      v-else
+      class="force"
+      src="@/assets/images/strength.svg"
+      alt=""
+    />
+  
     <ul id="training" class="flex justify-center space-x-8">
       <li
         :class="
@@ -73,6 +72,10 @@ function Chrono() {
         {{ num_work }}
       </li>
     </ul>
-    <Button id="validate-work" text="Valider" @click="Chrono()" />
+    <Button
+      id="validate-work"
+      :text="store.work == store.serie ? 'Terminer' : 'Valider'"
+      @click="Chrono()"
+    />
   </div>
 </template>
