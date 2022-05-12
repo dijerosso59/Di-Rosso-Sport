@@ -7,7 +7,7 @@
 @layer components {
 
   body {
-    @apply bg-black text-white container mx-auto px-4 font-fredoka;
+    @apply bg-black text-white container mx-auto px-4 font-fredoka relative;
   }
 
   h1,
@@ -113,5 +113,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* npx tailwindcss -i ./dev.css -o ./style.css --watch */

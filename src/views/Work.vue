@@ -49,7 +49,7 @@ function Chrono() {
 
 <template>
   <div class="app justify-center space-y-12">
-    <h1 class="text-center">Entraînement</h1>
+    <h1 class="text-center">Activité</h1>
 
     <h2 v-if="data.show" class="time">{{ store.repos_action }}</h2>
     <img
